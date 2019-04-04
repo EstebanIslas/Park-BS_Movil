@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityRegistroEmpresa"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_titulo_registro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="30sp"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="45sp"
+                android:layout_marginBottom="5sp"
+                android:text="¡Unete como empresa!"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30sp"
+                android:layout_marginLeft="30sp"
+                android:layout_gravity="left"
+                android:text="Da a conocer tu negocio con un click!"
+                android:textColor="@color/colorhint"
+                android:textSize="16dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="50dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginRight="10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_nombre_empresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Nombre de la empresa:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_nombre_empresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30dp"
+                    android:hint="Nombre Empresa"
+                    android:inputType="textPersonName"
+                    android:textColor="#FFF"
+                    android:textColorHint="@color/colorhint"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:backgroundTint="@color/colorhint"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginRight="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_titular_empresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Nombre del titular:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_titular_empresa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30dp"
+                    android:hint="Nombre del titular"
+                    android:inputType="textPersonName"
+                    android:textColor="#FFF"
+                    android:textColorHint="@color/colorhint"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:backgroundTint="@color/colorhint"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginRight="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_colonia_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Colonia:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginRight="10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_calle_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Calle:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <EditText
+                        android:id="@+id/edt_colonia_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Nombre de la colonia"
+                        android:inputType="text"
+                        android:textColor="#FFF"
+                        android:textColorHint="@color/colorhint"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:backgroundTint="@color/colorhint"/>
+
+                    <EditText
+                        android:id="@+id/edt_calle_empresa"
+                        android:layout_width="168dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:backgroundTint="@color/colorhint"
+                        android:hint="Nombre de la calle"
+                        android:inputType="text"
+                        android:textColor="#FFF"
+                        android:textColorHint="@color/colorhint"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginRight="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_numero_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Número:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginRight="10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_codpost_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Código Postal:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <EditText
+                        android:id="@+id/edt_numero_empresa"
+                        android:layout_width="132dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorhint"
+                        android:hint="Número"
+                        android:inputType="number"
+                        android:textColor="#FFF"
+                        android:textColorHint="@color/colorhint"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/edt_codpost_empresa"
+                        android:layout_width="168dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:backgroundTint="@color/colorhint"
+                        android:hint="Código postal"
+                        android:inputType="number"
+                        android:textColor="#FFF"
+                        android:textColorHint="@color/colorhint"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginRight="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_longitud_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Longitud:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginRight="10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_latitud_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Latitud:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <EditText
+                        android:id="@+id/edt_longitud_empresa"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorhint"
+                        android:hint="Longitud"
+                        android:inputType="numberDecimal"
+                        android:textColor="#FFF"
+                        android:textColorHint="@color/colorhint"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/edt_latitud_empresa"
+                        android:layout_width="168dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:backgroundTint="@color/colorhint"
+                        android:hint="Latitud"
+                        android:inputType="numberDecimal"
+                        android:textColor="#FFF"
+                        android:textColorHint="@color/colorhint"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        app:srcCompat="@drawable/phone_call"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_tarifa_empresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Tarifa:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_tarifa_empresa"
+                    android:hint="Tarifa por hora"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30dp"
+                    android:inputType="numberDecimal"
+                    android:textColor="#FFF"
+                    android:textColorHint="@color/colorhint"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:backgroundTint="@color/colorhint"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginRight="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_horain_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Hora inicio:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginRight="10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_horafin_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Hora fin:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30sp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edt_horain_empresa"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorhint"
+                        android:hint="Hora inicio"
+                        android:textColor="#FFF"
+                        android:textColorHint="@color/colorhint"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:enabled="false"
+                        android:focusable="false"/>
+
+                    <EditText
+                        android:id="@+id/edt_horafin_empresa"
+                        android:layout_width="168dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:backgroundTint="@color/colorhint"
+                        android:hint="Hora fin"
+                        android:textColor="#FFF"
+                        android:textColorHint="@color/colorhint"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="13sp"
+                        android:enabled="false"
+                        android:focusable="false"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <Button
+                        android:id="@+id/btn_hora_inicio_empresa"
+                        android:layout_width="110dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="15sp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/rubik"
+                        android:onClick="iniciohrOnClick"
+                        android:text="Hora Inicio"
+                        android:textColor="#000000"
+                        android:textSize="10dp" />
+
+                    <Button
+                        android:id="@+id/btn_hora_fin_empresa"
+                        android:layout_width="110dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="65dp"
+                        android:background="@color/colorPrimary"
+                        android:fontFamily="@font/rubik"
+                        android:onClick="finhrOnClick"
+                        android:text="Hora Fin"
+                        android:textColor="#000000"
+                        android:textSize="10dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginRight="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_diain_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Dia inicio:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        app:srcCompat="@drawable/user"
+                        android:layout_marginLeft="90dp"
+                        android:layout_marginRight="10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_diafin_empresa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Dia fin:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30sp"
+                    android:orientation="horizontal">
+
+                    <EditText
+                        android:id="@+id/edt_diain_empresa"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/colorhint"
+                        android:hint="Dia inicio"
+                        android:inputType="textPersonName"
+                        android:textColor="#FFF"
+                        android:textColorHint="@color/colorhint"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/edt_diafin_empresa"
+                        android:layout_width="168dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:backgroundTint="@color/colorhint"
+                        android:hint="Dia fin"
+                        android:inputType="textPersonName"
+                        android:textColor="#FFF"
+                        android:textColorHint="@color/colorhint"
+                        android:textColorLink="@color/colorPrimary"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        app:srcCompat="@drawable/phone_call"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_telefono_empresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Teléfono:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_telefono_empresa"
+                    android:hint="Teléfono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30dp"
+                    android:inputType="phone"
+                    android:textColor="#FFF"
+                    android:textColorHint="@color/colorhint"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:backgroundTint="@color/colorhint"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10sp"
+                        app:srcCompat="@drawable/mail"/>
+
+                    <TextView
+                        android:id="@+id/tv_correo_empresa"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Correo:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_correo_empresa"
+                    android:hint="Correo Electrónico"
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="#FFF"
+                    android:textColorHint="@color/colorhint"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:backgroundTint="@color/colorhint"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        app:srcCompat="@drawable/lock"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_password_usuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Contraseña:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_password_empresa"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="#FFF"
+                    android:textColorHint="@color/colorhint"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:backgroundTint="@color/colorhint"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="30sp"
+                    android:layout_marginLeft="30sp">
+
+                    <ImageView
+                        app:srcCompat="@drawable/confirm"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_confirm_password_usuario"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:text="Confirmar Contraseña:"
+                        android:textColor="#FFF"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/edt_confirm_password_empresa"
+                    android:hint="Confirmación"
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30dp"
+                    android:textColor="#FFF"
+                    android:textColorHint="@color/colorhint"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:backgroundTint="@color/colorhint"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_registrar_empresa"
+                android:text="Registrate"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="28dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/rubik"
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

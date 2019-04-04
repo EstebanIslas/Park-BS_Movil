@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityLogin"
+    android:background="@color/colorPrimaryDark"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titulo_login"
+                android:layout_width="match_parent"
+                android:layout_height="46dp"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="30sp"
+                android:text="Inicio de Sesión"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:id="@+id/tv_correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="1"
+                    android:text="Correo Electrónico:"
+                    android:textColor="#FFF"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edt_correo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Correo"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30sp"
+                    android:inputType="textEmailAddress"
+                    android:textColor="#FFF"
+                    android:textColorHint="@color/colorhint"
+                    android:textSize="13sp"
+                    android:backgroundTint="#FFF"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:orientation="vertical"
+                android:layout_marginTop="10sp">
+
+                <TextView
+                    android:id="@+id/tv_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30sp"
+                    android:layout_weight="1"
+                    android:text="Contraseña:"
+                    android:textColor="#FFF"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30sp"
+                    android:backgroundTint="#FFF"
+                    android:hint="Contraseña"
+                    android:inputType="textPassword"
+                    android:textColor="#FFF"
+                    android:textColorHint="@color/colorhint"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_ingresae"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="30sp"
+                android:layout_marginRight="30sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="25dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/rubik"
+                android:text="Ingresar"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
