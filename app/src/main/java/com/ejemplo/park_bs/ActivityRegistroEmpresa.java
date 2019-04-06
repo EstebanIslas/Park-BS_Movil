@@ -2,6 +2,7 @@ package com.ejemplo.park_bs;
 
 import android.app.TimePickerDialog;
 import android.content.Intent;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -47,14 +48,14 @@ public class ActivityRegistroEmpresa extends AppCompatActivity {
     EditText edt_telefono;
     EditText edt_correo, edt_password, edt_confirmar_password;
 
-    private String webservice_url = "http://192.168.1.69:8080/api_usuarios?user_hash=12345&action=put&";
+    private String webservice_url = "http://130.100.17.77:8080/api_estacionamientos?user_hash=12345&action=put&";
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro_empresa);
-
+        StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder().permitNetwork().build());
         initComponents();
     }
 
@@ -91,17 +92,41 @@ public class ActivityRegistroEmpresa extends AppCompatActivity {
             try {
                 StringBuilder sb = new StringBuilder();
                 sb.append(webservice_url);
-                /*sb.append("nombre=" + edt_nombre_usuario.getText());
+                sb.append(("nombre=" + edt_nombre_empresa.getText()));
                 sb.append("&");
-                sb.append("apellidos=" + edt_apellidos_usuario.getText());
+                sb.append(("titular=" + edt_titular.getText()));
                 sb.append("&");
-                sb.append("telefono=" + edt_telefono_usuario.getText());
+                sb.append(("colonia=" + edt_colonia.getText()));
                 sb.append("&");
-                sb.append("correo=" + edt_correo_usuario.getText());
+                sb.append(("calle=" + edt_calle.getText()));
                 sb.append("&");
-                sb.append("password=" + password);
-                sb.append("&");*/
-                sb.append("rol=1");
+                sb.append(("numero=" + edt_numero.getText()));
+                sb.append("&");
+                sb.append(("cp=" + edt_cod_postal.getText()));
+                sb.append("&");
+                sb.append(("latitud=" + edt_latitud.getText()));
+                sb.append("&");
+                sb.append(("longitud=" + edt_longitud.getText()));
+                sb.append("&");
+                sb.append(("tarifa=" + edt_tarifa.getText()));
+                sb.append("&");
+                sb.append(("telefono=" + edt_telefono.getText()));
+                sb.append("&");
+                sb.append(("correo=" + edt_correo.getText()));
+                sb.append("&");
+                sb.append(("hora_apertura=" + edt_hora_inicio.getText()));
+                sb.append("&");
+                sb.append(("hora_cierre=" + edt_hora_final.getText()));
+                sb.append("&");
+                sb.append(("dia_inicio=" + edt_dia_inicio.getText()));
+                sb.append("&");
+                sb.append(("dia_final=" + edt_dia_final.getText()));
+                sb.append("&");
+                sb.append(("password=" + password));
+                sb.append("&");
+                sb.append(("rol=2"));
+
+
 
                 webServicePut(sb.toString());
                 Log.e("URL", sb.toString());
@@ -115,7 +140,7 @@ public class ActivityRegistroEmpresa extends AppCompatActivity {
 
 
             } catch (Exception ex) {
-                Toast.makeText(ActivityRegistroEmpresa.this, "Error " + ex.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(ActivityRegistroEmpresa.this, "Error Insert " + ex.getMessage(), Toast.LENGTH_SHORT).show();
             }
 
         } else {
@@ -201,8 +226,8 @@ public class ActivityRegistroEmpresa extends AppCompatActivity {
                         .substring(1, 3));
             }
             return sb.toString();
-        } catch (java.security.NoSuchAlgorithmException e) {
-            System.out.println(e.getMessage());
+        } catch (Exception e) {
+            Log.e("#####Error HASH: #####",e.getMessage());
         }
         return null;
     }
@@ -243,7 +268,7 @@ public class ActivityRegistroEmpresa extends AppCompatActivity {
 
             parseInformation(webServiceResult);
         }catch(Exception e){
-            Log.e("Error 100",e.getMessage());
+            Log.e("Error 100 Web Service:",e.getMessage());
         }
     }
 
@@ -254,7 +279,7 @@ public class ActivityRegistroEmpresa extends AppCompatActivity {
         try{
             jsonArray = new JSONArray(jsonResult);
         }catch (JSONException e){
-            Log.e("Error 101",e.getMessage());
+            Log.e("#######Error 101#######",e.getMessage());
         }
         for(int i=0;i<jsonArray.length();i++){
             try{
@@ -262,10 +287,10 @@ public class ActivityRegistroEmpresa extends AppCompatActivity {
                 //Se obtiene cada uno de los datos cliente del webservice
                 status = jsonObject.getString("status");
                 description = jsonObject.getString("description");
-                Log.e("STATUS",status);
-                Log.e("DESCRIPTION",description);
+                Log.e("#######STATUS#######",status);
+                Log.e("#######DESCRIPTION#####",description);
             }catch (JSONException e){
-                Log.e("Error 102",e.getMessage());
+                Log.e("#######Error 102#######",e.getMessage());
             }
         }
     }

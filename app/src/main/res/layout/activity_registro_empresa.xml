@@ -825,18 +825,19 @@
 
             <Button
                 android:id="@+id/btn_registrar_empresa"
-                android:text="Registrate"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="30sp"
-                android:layout_marginRight="30sp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="30sp"
                 android:layout_marginTop="40dp"
+                android:layout_marginRight="30sp"
                 android:layout_marginBottom="28dp"
                 android:background="@color/colorPrimary"
                 android:fontFamily="@font/rubik"
+                android:onClick="btn_insertregistroOnClick"
+                android:text="Registrate"
                 android:textColor="#000000"
-                android:textSize="13dp"/>
+                android:textSize="13dp" />
 
         </LinearLayout>
     </ScrollView>
