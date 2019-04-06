@@ -32,8 +32,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:orientation="vertical"
-                android:layout_marginTop="30dp">
+                android:layout_marginTop="30dp"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tv_correo"
@@ -51,21 +51,21 @@
                     android:id="@+id/edt_correo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Correo"
                     android:layout_marginLeft="30sp"
                     android:layout_marginRight="30sp"
+                    android:backgroundTint="#FFF"
+                    android:hint="Correo"
                     android:inputType="textEmailAddress"
                     android:textColor="#FFF"
                     android:textColorHint="@color/colorhint"
-                    android:textSize="13sp"
-                    android:backgroundTint="#FFF"/>
+                    android:textSize="13sp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="75dp"
-                android:orientation="vertical"
-                android:layout_marginTop="10sp">
+                android:layout_marginTop="10sp"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/tv_password"
@@ -95,19 +95,34 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btn_ingresae"
+                android:id="@+id/btn_ingresar"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginLeft="30sp"
-                android:layout_marginRight="30sp"
                 android:layout_gravity="center"
+                android:layout_marginLeft="30sp"
                 android:layout_marginTop="35dp"
+                android:layout_marginRight="30sp"
                 android:layout_marginBottom="25dp"
                 android:background="@color/colorPrimary"
                 android:fontFamily="@font/rubik"
                 android:text="Ingresar"
                 android:textColor="#000000"
                 android:textSize="13dp" />
+
+
+
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/btn_signInButton"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="30sp"
+                android:layout_marginBottom="25dp"
+                android:textColor="#000000"
+                android:textSize="13dp"/>
+
         </LinearLayout>
     </ScrollView>
 

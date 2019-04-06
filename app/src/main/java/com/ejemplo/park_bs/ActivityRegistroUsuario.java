@@ -27,7 +27,7 @@ public class ActivityRegistroUsuario extends AppCompatActivity {
     EditText edt_password_usuario;
     EditText edt_confirmar_password;
 
-    private String webservice_url = "http://192.168.1.69:8080/api_usuarios?user_hash=12345&action=put&";
+    private String webservice_url = "http://130.100.17.77:8080/api_usuarios?user_hash=12345&action=put&";
 
 
     @Override
