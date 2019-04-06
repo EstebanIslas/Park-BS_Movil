@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityLogin"></activity>
+        <activity android:name=".GoogleUsuarioifo"></activity>
+        <activity android:name=".ActivityLogin" />
         <activity android:name=".ActivityRegistroEmpresa" />
         <activity android:name=".ActivityRegistroUsuario" />
         <activity android:name=".ActivityRollUsuario" />
