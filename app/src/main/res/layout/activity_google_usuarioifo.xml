@@ -79,36 +79,56 @@
             android:textAlignment="center"/>
 
             <Button
-                android:id="@+id/btn_revoke"
+                android:id="@+id/btn_iraContenedor"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="30sp"
-                android:layout_marginTop="35dp"
-                android:layout_marginRight="30sp"
-                android:layout_marginBottom="15dp"
-                android:background="@color/colorPrimary"
-                android:fontFamily="@font/rubik"
-                android:onClick="revokeOnClick"
-                android:text="Revoke"
-                android:textColor="#000000"
-                android:textSize="13dp" />
-
-            <Button
-                android:id="@+id/btn_log_out"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="30sp"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="15dp"
                 android:layout_marginRight="30sp"
                 android:layout_marginBottom="25dp"
                 android:background="@color/colorPrimary"
                 android:fontFamily="@font/rubik"
-                android:onClick="logOutOnClick"
-                android:text="Log Out"
+                android:onClick="iraContenedorOnClick"
+                android:text="Comienza!"
                 android:textColor="#000000"
                 android:textSize="13dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:id="@+id/btn_revoke"
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/diseno_btn_desicion_empre_user"
+                    android:fontFamily="@font/rubik"
+                    android:onClick="revokeOnClick"
+                    android:text="Revoke"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13dp" />
+
+                <Button
+                    android:id="@+id/btn_log_out"
+                    android:layout_width="153dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/diseno_btn_desicion_empre_user"
+                    android:fontFamily="@font/rubik"
+                    android:onClick="logOutOnClick"
+                    android:text="Log Out"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13dp" />
+            </LinearLayout>
+
+
 
         </LinearLayout>
 

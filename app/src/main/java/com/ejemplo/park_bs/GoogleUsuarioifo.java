@@ -95,6 +95,13 @@ public class GoogleUsuarioifo extends AppCompatActivity implements GoogleApiClie
         startActivity(intent);
     }
 
+
+    public void iraContenedorOnClick(View view){
+        Intent intent = new Intent(this, ActivityContenedorUsuario.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
     public void logOutOnClick(View v){
         Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
             @Override
