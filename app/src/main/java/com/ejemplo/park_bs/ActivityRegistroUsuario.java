@@ -27,7 +27,7 @@ public class ActivityRegistroUsuario extends AppCompatActivity {
     EditText edt_password_usuario;
     EditText edt_confirmar_password;
 
-    private String webservice_url = "http://130.100.17.77:8080/api_usuarios?user_hash=12345&action=put&";
+    private String webservice_url = "http://192.168.1.69:8080/api_usuarios?user_hash=12345&action=put&";
 
 
     @Override
@@ -107,6 +107,7 @@ public class ActivityRegistroUsuario extends AppCompatActivity {
 
 
                     Intent login = new Intent(this, ActivityLogin.class);//Ayuda a crear fucniones para pasar de una pantalla a otra
+                    login.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(login);
 
 
