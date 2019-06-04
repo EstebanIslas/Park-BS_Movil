@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.gms.auth.api.Auth;
@@ -16,25 +16,19 @@ import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 
-public class ActivityLogin extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener {
+public class ActivityLogin extends AppCompatActivity implements GoogleApiClient.OnConnectionFailedListener{
 
     private GoogleApiClient googleApiClient;
 
-    EditText edt_correo_electronico;
-    EditText edt_password;
-
-
-
     private SignInButton signInButton;
+    private Button jb_ingresar;
 
     public static final int SIGN_IN_CODE = 777;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-
-        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        setContentView(R.layout.activity_login);GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();
 
@@ -42,6 +36,8 @@ public class ActivityLogin extends AppCompatActivity implements GoogleApiClient.
                 .enableAutoManage(this, this)
                 .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
                 .build();
+
+        jb_ingresar = (Button)findViewById(R.id.btn_ingresar);
 
         signInButton =(SignInButton)findViewById(R.id.btn_signInButton);
         signInButton.setOnClickListener(new View.OnClickListener() {
@@ -51,12 +47,19 @@ public class ActivityLogin extends AppCompatActivity implements GoogleApiClient.
                 startActivityForResult(intent, SIGN_IN_CODE);
             }
         });
-    }
 
+
+    }
 
     @Override
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
+    }
+
+    public void jb_iniciarOnClick(View view){
+        Intent intent = new Intent(this, ActivityContenedorUsuario.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 
     @Override
@@ -73,12 +76,14 @@ public class ActivityLogin extends AppCompatActivity implements GoogleApiClient.
         if(result.isSuccess()){
             goMainScreen();
         }else{
-            Toast.makeText(this, "No existe el usuario", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, ActivityContenedorUsuario.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
     }
 
     private void goMainScreen() {
-        Intent intent = new Intent(this, GoogleUsuarioifo.class);
+        Intent intent = new Intent(this, ActivityContenedorUsuario.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }

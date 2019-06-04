@@ -71,12 +71,14 @@ public class ActivityMapsUsuario extends FragmentActivity implements OnMapReadyC
         mMap.setMyLocationEnabled(true); //Permisos para conocer tu ubicacion exacta
 
         // Add a marker in Sydney and move the camera
-        LatLng casa = new LatLng(20.106870, -98.357451); //Longitud y latitud de un punto
+        LatLng casa = new LatLng(20.106551, -98.357062); //Longitud y latitud de un punto
         LatLng otracasa = new LatLng(20.107283, -98.356882);
+        LatLng casa2 = new LatLng(20.107568, -98.357292);
 
         //Se agrega la posicion en el mapa y un titulo al icono de posicion al momento de hacer tap
-        mMap.addMarker(new MarkerOptions().position(casa).title("Casa de Narcos").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
-        mMap.addMarker(new MarkerOptions().position(otracasa).title("Casa de Diputados").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
+        mMap.addMarker(new MarkerOptions().position(casa).title("Estacionamiento Juarez").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mMap.addMarker(new MarkerOptions().position(otracasa).title("Park").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
+        mMap.addMarker(new MarkerOptions().position(casa2).title("PARKITO").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
         float zoomLevel=19; //Variable de zoom
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(casa, zoomLevel)); //Muestra el mapa con el zoom antes creado

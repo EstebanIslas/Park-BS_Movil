@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityReservarUsuario"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryDark">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="30sp"
+                android:text="Reserva"
+                android:textColor="@color/colorPrimary"
+                android:textSize="25sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30sp"
+                android:layout_marginLeft="30sp"
+                android:layout_gravity="left"
+                android:text="Reserva solo con un click!"
+                android:textColor="@color/colorhint"
+                android:textSize="16dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="183dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/imv_photoImageView"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/diseno_btn_desicion_empre_user"/>
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tv_nombre_empresa_reservar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Nombre Empresa"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:layout_marginTop="40dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_id_empresa_reservar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ID"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="4dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_telefono_empresa_reservar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Teléfono"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                android:layout_marginTop="5dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_hora_apertura_reservar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Hora Inicio"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="4dp"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/tv_hora_cierre_reservar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="2dp"
+                android:text="Hora Cierre"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_disponibilidad_reservar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:text="Disponibilidad"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10sp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_horain_empresa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginTop="5sp"
+                    android:layout_marginRight="30sp"
+                    android:text="Hora de reserva:"
+                    android:textColor="#FFF"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/edt_horade_reservar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30sp"
+                    android:backgroundTint="@color/colorhint"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:hint="Hora inicio"
+                    android:textColor="#FFF"
+                    android:textColorHint="@color/colorhint"
+                    android:textColorLink="@color/colorPrimary"
+                    android:textSize="13sp" />
+
+                <Button
+                    android:id="@+id/btn_hora_inicio_empresa"
+                    android:layout_width="110dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="30sp"
+                    android:layout_marginRight="30sp"
+                    android:background="@color/colorPrimary"
+                    android:fontFamily="@font/rubik"
+                    android:onClick="comienzaOnClick"
+                    android:text="Selecciona la hora"
+                    android:textColor="#000000"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btn_iraContenedor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="30sp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="30sp"
+                android:layout_marginBottom="25dp"
+                android:background="@color/colorPrimary"
+                android:fontFamily="@font/rubik"
+                android:onClick="btn_insertarReservaOnClick"
+                android:text="Comienza!"
+                android:textColor="#000000"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+</LinearLayout>
